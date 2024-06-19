@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de registro</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div>
+        <h1>Formulario de registro</h1>
+        <h2>Llene los siguientes campos</h2>
+        <form action="" method="get">
+            
+            <label for="username">Nombre de usuario:</label><br>
+            <input type="text" name="username" 
+            id="username" placeholder="Usuario"
+            maxlength="25" pattern="[A-Za-z0-9]{5,15}" title="Letras y numeros, 5 a 15 Caracteres" required ><br>
+
+            <label for="pass">Contraseña:</label><br>
+            <input type="password" name="pass" id="pass"
+            placeholder="Contraseña" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" 
+            title="Debe conetener al menos 8 caracteres, incluyendo al menos una letra mayúscula, una minúscula, un número y un carácter especial (@$!%*?&)" 
+            required><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" name="email" id="email" required
+            placeholder="example@example.com" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Debe llevar @, además del dominio '.com', '.org', etc."><br>
+
+            <label for="tel">Telefono:</label><br>
+            <input type="tel" maxlength="13" minlength="13" 
+            placeholder="+52... Número de 10 caracteres" pattern="^\+[1-9]\d{1,14}$" title="Debe llevar el codigo internacional de tu pais"><br>
+
+            <label for="fch">Fecha de nacimiento:</label><br>
+            <input type="date" name="fecha" pattern="^(\d{2})(\/\-)(\d{2})(\/\-)(\d{4})$" required><br>
+
+            <label for="CP">Codigo postal:</label><br>
+            <input type="text" name="CP" pattern="[0-9]{5}" title="Deben ser 5 digitos" placeholder="#####">
+            <br>
+            <br>
+            <input class="button" type="submit" value="Enviar">
+        </form>
+    </div>
+</body>
+</html>
